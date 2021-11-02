@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+  }
+  
+  .todo-container {
+    width: 1000px;
+    height: 80vh;
+    display: flex;
+  }
+  
+  .status {
+    width: 25%;
+    background-color: #3623e2;
+    position: relative;
+    padding: 60px 1rem 0.5rem;
+  }
+  
+  .status:nth-child(even) {
+    background-color: #412ee7;
+  }
+  
+  .status h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0f0cca;
+    color: #f3f3f3;
+    margin: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  
+
+
+  #addBtn {
+    padding: 0.5rem 1rem;
+    background-color: rgb(3, 105, 221);
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #addBtn:hover {
+    background-color: rgb(33, 116, 172);
+  }
+  
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: rgba(0, 11, 161, 0.541) 0px 0px 0px 1px,
+      rgba(13, 1, 122, 0.37) 0px 2px 4px;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .todo .close {
+    position: absolute;
+    right: 1rem;
+    top: 0rem;
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .todo .close:hover {
+    color: #262664;
+  }
+  
+  /* popup */
+  
+  .close-popup {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .popup {
+    width: 450px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: rgb(40, 38, 175);
+  }
+  
+  .popup.active {
+    top: 15%;
+  }
+  
+  .popup .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(53, 66, 255);
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .popup .body {
+    padding: 0.75rem;
+  }
+  
+  .title{
+    color: white;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64, 5, 224, 0.3);
+  }
+  
+  #overlay.active {
+    display: block;
+  }
+  
+  #todoInput,
+  #todoSubmit {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0.25rem;
+  }
+  
+  #todoSubmit {
+    background-color: #4caf50;
+    color: #f3f3f3;
+    font-size: 1.25rem;
+    border: none;
+  }
